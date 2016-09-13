@@ -41,6 +41,10 @@ public class Recertify extends AbstractActivitiServiceTask {
 
     @Override
     protected void doExecute(final String executionId) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
         LOG.debug("Processing Recertification {}", executionId);
         User user = engine.getRuntimeService().
                 getVariable(executionId, ActivitiUserWorkflowAdapter.USER, User.class);

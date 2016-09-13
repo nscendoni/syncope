@@ -148,8 +148,13 @@ under the License.
                mandatoryCondition="false" multivalue="0" uniqueConstraint="0" readonly="0"
                validatorClass="org.apache.syncope.core.persistence.jpa.attrvalue.validation.EmailAddressValidator"/>
 
+<<<<<<< HEAD
   <Task DTYPE="SchedTask" id="e95555d2-1b09-42c8-b25b-f4c4ec598989" name="Identity Recertification Task"  active="0"
         jobDelegateClassName="org.apache.syncope.core.provisioning.java.job.IdentityRecertification"/>
+=======
+  <Task DTYPE="SchedTask" id="e95555d2-1b09-42c8-b25b-f4c4ec598989" name="Identity Recertification Task"  active="1"
+        jobDelegateClassName="org.apache.syncope.core.provisioning.java.job.IdentityRecertification" cronExpression="0 0 0 0 0 0"/>
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
   
   <!-- Password reset notifications -->
   <MailTemplate id="requestPasswordReset"

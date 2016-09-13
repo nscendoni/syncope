@@ -136,6 +136,7 @@ public class JPAUser
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastLoginDate;
 
+ 
     /**
      * Change password date.
      */
@@ -191,6 +192,14 @@ public class JPAUser
     @Column(nullable = true)
     private String securityAnswer;
 
+    @Column(nullable = true)
+    private String lastRecertificator;
+
+    @Column(nullable = true)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastRecertification;
+
+    
     @Override
     public AnyType getType() {
         return ApplicationContextProvider.getBeanFactory().getBean(AnyTypeDAO.class).findUser();
@@ -517,4 +526,27 @@ public class JPAUser
         return memberships;
     }
 
+<<<<<<< HEAD
+=======
+    @Override
+    public String getLastRecertificator() {
+        return lastRecertificator;
+    }
+
+    @Override
+    public void setLastRecertificator(final String lastRecertificator) {
+        this.lastRecertificator = lastRecertificator;
+    }
+
+    @Override
+    public Date getLastRecertification() {
+        return lastRecertification;
+    }
+
+    @Override
+    public void setLastRecertification(final Date lastRecertification) {
+        this.lastRecertification = lastRecertification;
+    }
+
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
 }

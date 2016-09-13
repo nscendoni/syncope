@@ -209,7 +209,11 @@ public class DefaultUserWorkflowAdapter extends AbstractUserWorkflowAdapter {
 
     @Override
     public WorkflowResult<String> requestCertify(final User user) {
+<<<<<<< HEAD
         throw new UnsupportedOperationException("Not supported.");
+=======
+        throw new UnsupportedOperationException("Not supported."); 
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
     }
 
 }

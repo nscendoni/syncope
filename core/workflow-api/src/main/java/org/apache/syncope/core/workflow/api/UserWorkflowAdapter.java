@@ -61,6 +61,10 @@ public interface UserWorkflowAdapter extends WorkflowAdapter {
     WorkflowResult<Pair<String, Boolean>> create(
             UserTO userTO, boolean disablePwdPolicyCheck, final Boolean enabled, boolean storePassword);
 
+
+    WorkflowResult<String> requestCertify(final User user);
+
+    
     /**
      * Request certification for the given user.
      * 

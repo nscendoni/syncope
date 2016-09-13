@@ -204,6 +204,10 @@ under the License.
       <roles>
         <role>committer</role>
       </roles>
+<<<<<<< HEAD
+=======
+      <url></url>
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
     </developer>
     <developer>
       <id>coheigea</id>

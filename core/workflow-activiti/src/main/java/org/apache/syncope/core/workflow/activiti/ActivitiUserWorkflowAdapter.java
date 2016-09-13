@@ -355,12 +355,22 @@ public class ActivitiUserWorkflowAdapter extends AbstractUserWorkflowAdapter {
 
         LOG.debug("Executing request-certify");
         Set<String> performedTasks = doExecuteTask(user, "request-certify", null);
+<<<<<<< HEAD
 
         PropagationByResource propByRes = engine.getRuntimeService().getVariable(
                 user.getWorkflowId(), PROP_BY_RESOURCE, PropagationByResource.class);
 
         saveForFormSubmit(user, null, propByRes);
 
+=======
+                
+        PropagationByResource propByRes = engine.getRuntimeService().getVariable(
+                user.getWorkflowId(), PROP_BY_RESOURCE, PropagationByResource.class);
+
+        saveForFormSubmit(
+                user, null, propByRes);
+                
+>>>>>>> c611d69ebfcd8fa642c8f58d4a363d1d66147449
         return new WorkflowResult<>(user.getKey(), null, performedTasks);
     }
 
@@ -369,6 +379,7 @@ public class ActivitiUserWorkflowAdapter extends AbstractUserWorkflowAdapter {
         Set<String> performedTasks = doExecuteTask(user, "suspend", null);
         updateStatus(user);
         User updated = userDAO.save(user);
+
 
         return new WorkflowResult<>(updated.getKey(), null, performedTasks);
     }
